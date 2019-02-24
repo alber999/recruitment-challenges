@@ -1,18 +1,18 @@
 const PositiveBitCounterTestDefinition = require('./../test/PositiveBitCounterTestDefinition')
-const PositiveBitCounterMathematical = require('./PositiveBitCounterMathematical')
+const PositiveBitCounterAlgorithmicNoMemory = require('./PositiveBitCounterAlgorithmicNoMemory')
 const assert = require('assert')
 
-describe('PositiveBitCounterMathematical', function () {
+describe('PositiveBitCounterAlgorithmicNoMemory', function () {
   PositiveBitCounterTestDefinition.TestDefinition().forEach(test => {
     it(test.title, function () {
       if (test.error != null) {
         assert.throws(
-          () => PositiveBitCounterMathematical.Count(test.input),
+          () => PositiveBitCounterAlgorithmicNoMemory.Count(test.input),
           error => {
             return error.constructor.name === test.error
           })
       } else {
-        assert.deepEqual(PositiveBitCounterMathematical.Count(test.input), test.expected)
+        assert.deepEqual(PositiveBitCounterAlgorithmicNoMemory.Count(test.input), test.expected)
       }
     })
   })

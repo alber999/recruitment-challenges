@@ -1,5 +1,5 @@
 function Count (input) {
-  if (isNaN(input)) {
+  if (input === null || isNaN(input)) {
     throw TypeError()
   }
 
