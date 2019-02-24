@@ -38,6 +38,12 @@ describe('NumberToBinaryArray', function () {
     assert.deepEqual(actual, expected)
   })
 
+  it('Should return the expected binary array for input = 2', function () {
+    let expected = [1, 0]
+    let actual = Utils.NumberToBinaryArray(2)
+    assert.deepEqual(actual, expected)
+  })
+
   it('Should return the expected binary array for input = 161', function () {
     let expected = [1, 0, 1, 0, 0, 0, 0, 1]
     let actual = Utils.NumberToBinaryArray(161)

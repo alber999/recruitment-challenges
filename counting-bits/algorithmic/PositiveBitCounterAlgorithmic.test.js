@@ -38,6 +38,12 @@ describe('PositiveBitCounterAlgorithmic', function () {
     assert.deepEqual(actual, expected)
   })
 
+  it('CountMemoryApproach: Should return the expected count for input = 2', function () {
+    let expected = [1, 1]
+    let actual = PositiveBitCounterAlgorithmic.CountMemoryApproach(2)
+    assert.deepEqual(actual, expected)
+  })
+
   it('CountMemoryApproach: Should return the expected count for input = 161 (even binary array length)', function () {
     let expected = [3, 0, 5, 7]
     let actual = PositiveBitCounterAlgorithmic.CountMemoryApproach(161)

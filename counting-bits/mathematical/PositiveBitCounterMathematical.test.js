@@ -38,6 +38,12 @@ describe('PositiveBitCounterMathematical', function () {
     assert.deepEqual(actual, expected)
   })
 
+  it('Should return the expected count for input = 2', function () {
+    let expected = [1, 1]
+    let actual = PositiveBitCounterMathematical.Count(2)
+    assert.deepEqual(actual, expected)
+  })
+
   it('Should return the expected count for input = 161 (even binary array length)', function () {
     let expected = [3, 0, 5, 7]
     let actual = PositiveBitCounterMathematical.Count(161)

@@ -16,7 +16,7 @@ function Count (input) {
   let totalBits = Math.floor(Math.log2(input)) + 1
   let i = totalBits
   let current = input
-  while (current > 0) {
+  while (i > 0) {
     let bit = current % 2 === 0 ? 0 : 1
     if (bit === 1) {
       result.push(totalBits - i)
