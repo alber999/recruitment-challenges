@@ -1,7 +1,15 @@
 const PositiveBitCounter = require('./PositiveBitCounter')
 const assert = require('assert')
 
-describe('PositiveBitCounter', function () {
+describe('PositiveBitCounter: STANDARD approach', function () {
+  it('Should return a TypeError when a non numeric value is supplied', function () {
+    assert.throws(
+      () => PositiveBitCounter.Count('non numeric'),
+      function isRangeError (error) {
+        return (error instanceof TypeError)
+      })
+  })
+
   it('Should return a RangeError when a negative value is supplied', function () {
     assert.throws(
       () => PositiveBitCounter.Count(-2),
