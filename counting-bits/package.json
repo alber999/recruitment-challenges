@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./**/*.test.js",
-    "lint": "eslint ."
+    "lint": "eslint ./**/*.js"
   },
   "author": "Diego T. <d.torres@payvision.com>",
   "license": "ISC",
