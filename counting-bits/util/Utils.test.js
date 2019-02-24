@@ -26,32 +26,32 @@ describe('NumberToBinaryArray', function () {
       })
   })
 
-  it('Should return the expected binary array for input = 0', function () {
+  it('Should return [0] for input = 0', function () {
     let expected = [0]
     let actual = Utils.NumberToBinaryArray(0)
     assert.deepEqual(actual, expected)
   })
 
-  it('Should return the expected binary array for input = 1', function () {
+  it('Should return [1] for input = 1', function () {
     let expected = [1]
     let actual = Utils.NumberToBinaryArray(1)
     assert.deepEqual(actual, expected)
   })
 
-  it('Should return the expected binary array for input = 2', function () {
+  it('Should return [1, 0] for input = 2', function () {
     let expected = [1, 0]
     let actual = Utils.NumberToBinaryArray(2)
     assert.deepEqual(actual, expected)
   })
 
-  it('Should return the expected binary array for input = 161', function () {
+  it('Should return [1, 0, 1, 0, 0, 0, 0, 1] for input = 161', function () {
     let expected = [1, 0, 1, 0, 0, 0, 0, 1]
     let actual = Utils.NumberToBinaryArray(161)
     assert.equal(expected.length, 8)
     assert.deepEqual(actual, expected)
   })
 
-  it('Should return the expected binary array for input = 92', function () {
+  it('Should return [1, 0, 1, 1, 1, 0, 0] for input = 92', function () {
     let expected = [1, 0, 1, 1, 1, 0, 0]
     let actual = Utils.NumberToBinaryArray(92)
     assert.equal(expected.length, 7)
