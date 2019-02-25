@@ -101,7 +101,7 @@ Solution through array operations pipeline
 
 `N`: Size of number bits array
 
-**Time complexity**: JS `Array.reverse` complexity + `N` (reduce) + JS `Array.unshift` complexity  ~= `O(N)`
+**Time complexity**: JS `Array.reverse` complexity + `N` (reduce) + JS `Array.unshift` complexity ~= `O(3N)` = `O(N)` **Linear**
 
 ### 2. Algorithmic no extra memory
 
