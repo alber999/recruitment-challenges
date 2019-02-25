@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha $(find src -name '*.test.js')",
+    "test-coverage": "nyc npm test",
     "lint": "eslint $(find src -name '*.js')"
   },
   "author": "Diego T. <d.torres@payvision.com>",
@@ -20,6 +21,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^4.1.0",
+    "nyc": "^13.3.0",
     "standard": "^10.0.3"
   }
 }
