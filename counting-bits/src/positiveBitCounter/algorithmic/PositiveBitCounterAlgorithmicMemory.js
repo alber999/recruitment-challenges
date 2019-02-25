@@ -1,7 +1,7 @@
-const Utils = require('./../util/Utils')
+const NumberUtil = require('../../util/NumberUtil')
 
 function Count (input) {
-  let binaryArray = Utils.NumberToBinaryArray(input)
+  let binaryArray = NumberUtil.ToBinaryArray(input)
   let binaryArrayLength = binaryArray.length
 
   /* first position of result array reserved to avoid unshift operation when adding total to first position */

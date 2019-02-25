@@ -1,11 +1,7 @@
-function Count (input) {
-  if (input === null || isNaN(input)) {
-    throw TypeError()
-  }
+const NumberValidator = require('../../validator/NumberValidator')
 
-  if (input < 0) {
-    throw RangeError()
-  }
+function Count (input) {
+  NumberValidator.Positive(input)
 
   if (input === 0) {
     return [0]

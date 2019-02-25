@@ -1,7 +1,7 @@
-const Utils = require('./../util/Utils')
+const NumberUtil = require('../../util/NumberUtil')
 
 function Count (input) {
-  let result = Utils.NumberToBinaryArray(input).reverse()
+  let result = NumberUtil.ToBinaryArray(input).reverse()
     .reduce((r, e, i) => {
       if (e === '1') {
         r.push(i)

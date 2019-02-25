@@ -4,8 +4,8 @@
   "description": "Payvision recruiting challenge: Counting Bits",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./**/*.test.js",
-    "lint": "eslint ./**/*.js"
+    "test": "mocha $(find src -name '*.test.js')",
+    "lint": "eslint $(find src -name '*.js')"
   },
   "author": "Diego T. <d.torres@payvision.com>",
   "license": "ISC",
