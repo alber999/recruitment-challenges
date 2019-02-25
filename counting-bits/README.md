@@ -88,4 +88,24 @@ All **tests** are located next to source code. All source code is tested includi
 
 ### 1. Standard solution
 
-The standard solution
+[PositiveBitCounterStandard.js](src/positiveBitCounter/standard/PositiveBitCounterStandard.js)
+
+Solution through array operations pipeline
+
+* Validate input (`type numeric && value >= 0`)
+* Transform input to array of bits: `NumberUtil.ToBinaryArray(input)`
+* `Reverse` array
+* `Reduce` array
+  * if array position `i === 1` add `i` to result array
+* Add at the beginning of result array (`unshift`) the size of the result array
+
+`N`: Size of number bits array
+
+**Time complexity**: JS `Array.reverse` complexity + `N` (reduce) + JS `Array.unshift` complexity  ~= `O(N)`
+
+### 2. Algorithmic no extra memory
+
+[PositiveBitCounterAlgorithmicNoMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicNoMemory.js)
+
+
+
