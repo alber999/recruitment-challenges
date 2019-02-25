@@ -13,8 +13,7 @@ function Count (input) {
   let i = totalBits
   let current = input
   while (i > 0) {
-    let bit = current % 2 === 0 ? 0 : 1
-    if (bit === 1) {
+    if (current % 2 === 1) {
       result.push(totalBits - i)
     }
     current = Math.floor(current / 2)
