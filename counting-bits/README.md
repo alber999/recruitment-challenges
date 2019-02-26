@@ -101,21 +101,47 @@ Solution through array operations pipeline
 
 `N`: Size of number bits array
 
-**Time complexity**: JS `Array.reverse` complexity + `N` (reduce) + JS `Array.unshift` complexity ~= `O(3N)` = `O(N)` **Linear**
+**Time complexity**: N `Array.reverse` + N (`Array.reduce`) + N `Array.unshift` ~= `O(3N)` ~= `O(N)` **Linear**
+
+**Space complexity**: No auxiliar structures = O(1)
 
 ### 2. Algorithmic no extra memory
 
 [PositiveBitCounterAlgorithmicNoMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicNoMemory.js)
 
+Algorithmic solution treating number array of bits
+
+First position of result array is _reserved_ for total number of positive bits. This position will be updated lately. This is done to avoid unshift operation when adding total to first position
+
+See picture below describing strategy
+
 ![alt text](./img/alg-no-memory.png "Algorithmic no extra memory solution")
 
 ### 3. Algorithmic with extra memory
+
+Algorithmic solution treating number array of bits and using an auxiliar _stack_ structure
+
+First position of result array is reserved for total number of positive bits. This position will be updated lately. This is done to avoid unshift operation when adding total to first position
+
+See picture below describing strategy
 
 [PositiveBitCounterAlgorithmicMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicMemory.js)
 
 ![alt text](./img/alg-memory.png "Algorithmic extra memory solution")
 
 ### 4. Mathematical
+
+Mathematical solution decomposing number to have its binary representation
+
+To get the number of bits before iterating the number: 
+
+```
+Math.floor(Math.log2(input)) + 1
+```
+
+First position of result array is reserved for total number of positive bits. This position will be updated lately. This is done to avoid unshift operation when adding total to first position
+
+See picture below describing strategy
 
 [PositiveBitCounterMathematical.js](src/positiveBitCounter/mathematical/PositiveBitCounterMathematical.js)
 
