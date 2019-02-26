@@ -107,11 +107,17 @@ Solution through array operations pipeline
 
 [PositiveBitCounterAlgorithmicNoMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicNoMemory.js)
 
+![alt text](./img/alg-no-memory.png "Algorithmic no extra memory solution")
+
 ### 3. Algorithmic with extra memory
 
 [PositiveBitCounterAlgorithmicMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicMemory.js)
+
+![alt text](./img/alg-memory.png "Algorithmic extra memory solution")
 
 ### 4. Mathematical
 
 [PositiveBitCounterMathematical.js](src/positiveBitCounter/mathematical/PositiveBitCounterMathematical.js)
 
+
+![alt text](./img/mathematical.png "Mathematical solution")

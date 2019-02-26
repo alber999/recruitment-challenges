@@ -7,14 +7,17 @@ function Count (input) {
   /* first position of result array reserved to avoid unshift operation when adding total to first position */
   let result = [0]
   let stack = []
+  let total = 0
   let start = 0
   let end = binaryArrayLength - 1
 
   while (start <= end) {
     if (binaryArray[end] === '1') {
+      total++
       result.push(binaryArrayLength - end - 1)
     }
     if (start !== end && binaryArray[start] === '1') {
+      total++
       stack.push(binaryArrayLength - start - 1)
     }
     start++
@@ -25,7 +28,7 @@ function Count (input) {
     result.push(stack.pop())
   }
 
-  result[0] = result.length - 1
+  result[0] = total
   return result
 }
 

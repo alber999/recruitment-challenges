@@ -10,16 +10,18 @@ function Count (input) {
   /* first position of result array reserved to avoid unshift operation when adding total to first position */
   let result = [0]
   let totalBits = Math.floor(Math.log2(input)) + 1
+  let total = 0
   let i = totalBits
   let current = input
   while (i > 0) {
     if (current % 2 === 1) {
+      total++
       result.push(totalBits - i)
     }
     current = Math.floor(current / 2)
     i--
   }
-  result[0] = result.length - 1
+  result[0] = total
   return result
 }
 
