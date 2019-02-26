@@ -26,7 +26,7 @@ I implemented 4 different approaches, it means, solutions for this challenge
     
     * **Memory**: Problem solved using extra memory (_space complexity added_). This solution has **better time complexity** than _No memory_ solution in the _best case scenario_, and **the same time complexity** than _No memory_ solution in the _worst case scenario_. Keep in mind that **this solution adds space complexity** using a `stack` structure
 
-* **Mathematical**: Above solutions are based in manipulation of the Number Bits Array obtained from `(input >>> 0).toString(2)`. This mathematical solution calculates Number Bits through JS native `Math` functions and composes result _on the fly_ 
+* **Mathematical**: Above solutions are based in manipulation of the Number Bits Array obtained from `(input >>> 0).toString(2)`. This mathematical solution calculates Number Bits through JS native `Math` functions and composes result _on the fly_ without using input to binary array representation 
 
 ## Best solution
 _Algorithmic.Memory_ solution is the **best average solution** in terms of _time complexity_. Note that this solution adds _space complexity_
@@ -86,6 +86,8 @@ All **tests** are located next to source code. All source code is tested includi
 
 ## Solutions discussion
 
+Input binary array and result array will not be considered in solution space complexity calculation
+
 ### 1. Standard solution
 
 [PositiveBitCounterStandard.js](src/positiveBitCounter/standard/PositiveBitCounterStandard.js)
@@ -103,7 +105,7 @@ Solution through array operations pipeline
 
 **Time complexity**: N `Array.reverse` + N (`Array.reduce`) + N `Array.unshift` ~= `O(3N)` ~= `O(N)` **Linear**
 
-**Space complexity**: No auxiliar structures = O(1)
+**Space complexity**: No auxiliar structures in solution = `O(1)`
 
 ### 2. Algorithmic no extra memory
 
