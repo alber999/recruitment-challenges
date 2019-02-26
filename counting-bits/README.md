@@ -133,7 +133,7 @@ See picture below describing strategy
 
 Mathematical solution decomposing number to have its binary representation
 
-To get the number of bits to represent number before start iterations:
+To get the number of bits of number binary representation before starting iterations:
 
 ```
 Math.floor(Math.log2(input)) + 1
