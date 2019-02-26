@@ -86,7 +86,7 @@ All **tests** are located next to source code. All source code is tested includi
 
 ## Solutions discussion
 
-Input binary array and result array will not be considered in solution space complexity calculation
+Input binary array representation and result array will not be considered in solution space complexity calculation
 
 ### 1. Standard solution
 
@@ -111,7 +111,9 @@ Solution through array operations pipeline
 
 [PositiveBitCounterAlgorithmicNoMemory.js](src/positiveBitCounter/algorithmic/PositiveBitCounterAlgorithmicNoMemory.js)
 
-Algorithmic solution treating number array of bits
+Algorithmic solution treating input binary array representation
+
+Input validation included (`type numeric && value >= 0`)
 
 First position of result array is _reserved_ for total number of positive bits. This position will be updated lately. This is done to avoid unshift operation when adding total to first position
 
@@ -121,7 +123,9 @@ See picture below describing strategy
 
 ### 3. Algorithmic with extra memory
 
-Algorithmic solution treating number array of bits and using an auxiliar _stack_ structure
+Algorithmic solution treating input binary array representation and using an auxiliar _stack_ structure
+
+Input validation included (`type numeric && value >= 0`)
 
 First position of result array is reserved for total number of positive bits. This position will be updated lately. This is done to avoid unshift operation when adding total to first position
 
@@ -134,6 +138,8 @@ See picture below describing strategy
 ### 4. Mathematical
 
 Mathematical solution decomposing number to have its binary representation
+
+Input validation included (`type numeric && value >= 0`)
 
 To get the number of bits of number binary representation before starting iterations:
 
