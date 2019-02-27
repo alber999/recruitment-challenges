@@ -1,0 +1,3 @@
+const MAX_32BIT_INTEGER = 2147483647
+
+module.exports = { MAX_32BIT_INTEGER }

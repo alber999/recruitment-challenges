@@ -1,4 +1,4 @@
-const NumberUtil = require('../../util/NumberUtil')
+const NumberUtil = require('../../number/NumberUtil')
 
 function Count (input) {
   let result = NumberUtil.ToBinaryArray(input).reverse()

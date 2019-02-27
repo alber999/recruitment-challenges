@@ -1,4 +1,4 @@
-const NumberValidator = require('../../validator/NumberValidator')
+const NumberValidator = require('../../number/NumberValidator')
 
 function Count (input) {
   NumberValidator.Positive(input)

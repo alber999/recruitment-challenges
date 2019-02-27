@@ -1,4 +1,4 @@
-const NumberValidator = require('../validator/NumberValidator')
+const NumberValidator = require('./NumberValidator')
 
 function ToBinaryArray (input) {
   NumberValidator.Positive(input)

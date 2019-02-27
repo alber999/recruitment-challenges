@@ -32,13 +32,12 @@ I made some modifications to project scaffolding in order to have a coherent and
 
 ```
 src/
+   number/
    positiveBitCounter/
       algorithmic/
       mathematical/
       standard/
       test/
-   util/
-   validator/
 .gitignore
 package.json
 README.md
@@ -50,9 +49,13 @@ README.md
 
 * `src/positiveBitCounter/test`: All 4 solutions are tested with same tests. This folder contains tests definitions as well as test runner. Duplicated code is not an option :)
 
-* `src/util`: Contains `NumberUtil.ToBinaryArray` function used in standard and algorithmic solutions
+* `src/number`: Contains
 
-* `src/validator`: Contains `NumberValidator.Positive` function used in all solutions
+  * `NumberDefinition` constant with 32 bit integer definition = 2147483647
+
+  * `NumberUtil.ToBinaryArray` function used in standard and algorithmic solutions
+  
+  * `NumberValidator.Positive` function used to validate positive safe integers between _0_ and _max 32 bit integer_ in all solutions
 
 # Tests
 All **tests** are located next to source code. All source code is tested including utility & support functions. More tests added to original ones to cover more cases
@@ -61,7 +64,7 @@ All **tests** are located next to source code. All source code is tested includi
 
 | #tests | coverage |
 | :----- | :------- |
-| 48 | 100% |
+| 63 | 100% |
 
 * Tests definition for PositiveBitCounterX approaches: [PositiveBitCounterTestDefinition.js](./src/positiveBitCounter/test/PositiveBitCounterTestDefinition.js)
 
