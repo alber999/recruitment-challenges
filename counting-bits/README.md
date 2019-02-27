@@ -60,6 +60,8 @@ README.md
 # Tests
 All **tests** are located next to source code. All source code is tested including utility & support functions. More tests added to original ones to cover more cases
 
+`assert.deepEqual` deprecated. Replaced by `assert.deepStrictEqual`
+
 **Test coverage** (_Istanbul_) support added
 
 | #tests | coverage |
