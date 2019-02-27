@@ -63,6 +63,11 @@ All **tests** are located next to source code. All source code is tested includi
 | :----- | :------- |
 | 48 | 100% |
 
+* Tests definition for PositiveBitCounterX approaches: [PositiveBitCounterTestDefinition.js](./src/positiveBitCounter/test/PositiveBitCounterTestDefinition.js)
+
+* Tests runner for PositiveBitCounterX approaches: [PositiveBitCounterTest.js](./src/positiveBitCounter/test/PositiveBitCounterTest.js)
+
+
 # Solution
 
 I implemented 4 different approaches, it means, solutions for this challenge
