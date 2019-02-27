@@ -1,36 +1,6 @@
-const NumberDefinition = require('../../number/NumberDefinition')
+const MAX_RANGE_NUMBER = 2147483647
 
 const Items = [
-  {
-    title: 'Should return a TypeError when a null value is supplied',
-    input: null,
-    error: 'TypeError'
-  },
-  {
-    title: 'Should return a TypeError when a non numeric value is supplied',
-    input: 'non numeric',
-    error: 'TypeError'
-  },
-  {
-    title: 'Should return a TypeError when an array value is supplied',
-    input: [],
-    error: 'TypeError'
-  },
-  {
-    title: 'Should return a TypeError when an object value is supplied',
-    input: {},
-    error: 'TypeError'
-  },
-  {
-    title: 'Should return a RangeError when a negative value is supplied',
-    input: -2,
-    error: 'RangeError'
-  },
-  {
-    title: 'Should return a RangeError when a grater than ' + NumberDefinition.MAX_32BIT_INTEGER + ' (max 32 bit integer) value is supplied',
-    input: NumberDefinition.MAX_32BIT_INTEGER + 1,
-    error: 'RangeError'
-  },
   {
     title: 'Should return [0] for input = 0',
     input: 0,
@@ -57,8 +27,8 @@ const Items = [
     expected: [3, 0, 5, 7]
   },
   {
-    title: 'Should return 31 (1) bits for input = ' + NumberDefinition.MAX_32BIT_INTEGER,
-    input: NumberDefinition.MAX_32BIT_INTEGER,
+    title: 'Should return 31 (1) bits for input = ' + MAX_RANGE_NUMBER,
+    input: MAX_RANGE_NUMBER,
     expected: [31, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
   }
 ]

@@ -1,6 +1,7 @@
-const NumberDefinition = require('./NumberDefinition')
 const NumberValidator = require('./NumberValidator')
 const assert = require('assert')
+
+const MAX_RANGE_NUMBER = 2147483647
 
 describe('NumberValidator', () => {
   describe('Positive', () => {
@@ -39,9 +40,9 @@ describe('NumberValidator', () => {
       )
     })
 
-    it('Should return a RangeError when a grater than ' + NumberDefinition.MAX_32BIT_INTEGER + ' (max 32 bit integer) value is supplied', () => {
+    it('Should return a RangeError when a grater than ' + MAX_RANGE_NUMBER + ' (max range number) value is supplied', () => {
       assert.throws(
-        () => NumberValidator.Positive(NumberDefinition.MAX_32BIT_INTEGER + 1),
+        () => NumberValidator.Positive(MAX_RANGE_NUMBER + 1),
         error => error instanceof RangeError
       )
     })
@@ -54,8 +55,8 @@ describe('NumberValidator', () => {
       NumberValidator.Positive(1)
     })
 
-    it(NumberDefinition.MAX_32BIT_INTEGER + ' (max 32 bit integer) should be a valid positive number', () => {
-      NumberValidator.Positive(NumberDefinition.MAX_32BIT_INTEGER)
+    it(MAX_RANGE_NUMBER + ' (max range number) should be a valid positive number', () => {
+      NumberValidator.Positive(MAX_RANGE_NUMBER)
     })
   })
 })

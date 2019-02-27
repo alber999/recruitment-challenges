@@ -1,7 +1,9 @@
-const testDefinition = require('./PositiveBitCounterTestDefinition')
 const assert = require('assert')
+const sinon = require('sinon')
+const testDefinition = require('./PositiveBitCounterTestDefinition')
+const NumberUtil = require('../../number/NumberUtil')
 
-function Run (cb) {
+function RunUseCases (cb) {
   testDefinition.Items.forEach(test => {
     it(test.title, () => {
       if (test.error != null) {
@@ -9,10 +11,20 @@ function Run (cb) {
           return error.constructor.name === test.error
         })
       } else {
-        assert.deepEqual(cb(test.input), test.expected)
+        assert.deepStrictEqual(cb(test.input), test.expected)
       }
     })
   })
 }
 
-module.exports = { Run }
+function RunCheckToBinaryArrayCalled (cb) {
+  it('Should call NumberUtil.ToBinaryArray', () => {
+    let input = 0
+    sinon.spy(NumberUtil, 'ToBinaryArray')
+    cb(input)
+    assert(NumberUtil.ToBinaryArray.calledOnce)
+    NumberUtil.ToBinaryArray.restore()
+  })
+}
+
+module.exports = { RunUseCases, RunCheckToBinaryArrayCalled }
