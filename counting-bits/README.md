@@ -66,7 +66,7 @@ All **tests** are located next to source code. All source code is tested includi
 
 | #tests | coverage |
 | :----- | :------- |
-| 63 | 100% |
+| 44 | 100% |
 
 * Tests definition for PositiveBitCounterX approaches: [PositiveBitCounterTestDefinition.js](./src/positiveBitCounter/test/PositiveBitCounterTestDefinition.js)
 
