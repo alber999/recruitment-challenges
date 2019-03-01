@@ -33,16 +33,17 @@ class ErrorFilter : ZuulFilter() {
         if (throwable is ZuulException) {
             log.error("Zuul internal error: ${throwable.errorCause}: ${throwable.message}")
 
+            val reasonPhrase = HttpStatus.valueOf(throwable.nStatusCode).reasonPhrase
+
             context.remove(THROWABLE_KEY)
             context.responseBody = ObjectMapper().writeValueAsString(Error(
                     timestamp = System.currentTimeMillis(),
-                    status = HttpStatus.SERVICE_UNAVAILABLE.value(),
-                    error = HttpStatus.SERVICE_UNAVAILABLE.reasonPhrase,
-                    message = HttpStatus.SERVICE_UNAVAILABLE.reasonPhrase,
-                    path = context.request.servletPath
+                    status = throwable.nStatusCode,
+                    error = reasonPhrase,
+                    message = reasonPhrase
             ))
             context.response.contentType = MediaType.APPLICATION_JSON_VALUE
-            context.responseStatusCode = HttpStatus.SERVICE_UNAVAILABLE.value()
+            context.responseStatusCode = throwable.nStatusCode
         }
         return null
     }

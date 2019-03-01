@@ -46,11 +46,10 @@ class ErrorFilterTest {
         filter.run()
         val error = ObjectMapper().readValue(context.responseBody, Error::class.java)
 
-        Assertions.assertEquals(503, error.status)
-        Assertions.assertEquals("Service Unavailable", error.error)
-        Assertions.assertEquals("Service Unavailable", error.message)
-        Assertions.assertEquals("/x", error.path)
-        Assertions.assertEquals(503, context.responseStatusCode)
+        Assertions.assertEquals(400, error.status)
+        Assertions.assertEquals("Bad Request", error.error)
+        Assertions.assertEquals("Bad Request", error.message)
+        Assertions.assertEquals(400, context.responseStatusCode)
     }
 
     @Test

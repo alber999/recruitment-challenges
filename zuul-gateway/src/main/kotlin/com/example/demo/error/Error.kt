@@ -16,8 +16,5 @@ data class Error(
         val error: String,
 
         @JsonProperty("message")
-        val message: String,
-
-        @JsonProperty("path")
-        val path: String
+        val message: String
 )
