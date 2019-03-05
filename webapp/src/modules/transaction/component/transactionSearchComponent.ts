@@ -1,11 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {TransactionActionCreator} from '../action/TransactionActionCreator';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-transaction-search',
     styleUrls: ['./transactionSearchComponent.scss'],
-    templateUrl: './transactionSearchComponent.html'
+    templateUrl: './transactionSearchComponent.html',
+    encapsulation: ViewEncapsulation.None,
 })
 export class TransactionSearchComponent implements OnInit {
 

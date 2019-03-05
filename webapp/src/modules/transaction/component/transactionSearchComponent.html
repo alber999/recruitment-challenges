@@ -1,13 +1,16 @@
 <form [formGroup]="form" (ngSubmit)="search()">
-    <mat-form-field>
-        <mat-select placeholder="Transaction Type" formControlName="type">
-            <mat-option>Transaction type</mat-option>
-            <mat-option *ngFor="let type of types" [value]="type">
+    <mat-form-field class="search-field" appearance="outline">
+        <mat-select placeholder="Transaction type" formControlName="type" panelClass="select">
+            <mat-option class="option">
+                <span>Transaction type</span>
+                <span><mat-icon>home</mat-icon></span>
+            </mat-option>
+            <mat-option class="option" *ngFor="let type of types" [value]="type">
                 {{ type.name }}
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="search-field" appearance="outline">
         <mat-select placeholder="Currency" formControlName="currency">
             <mat-option>Currency</mat-option>
             <mat-option *ngFor="let currency of currencies" [value]="currency">
@@ -15,8 +18,7 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <div>
-        <button mat-raised-button type="submit">Search</button>
-    </div>
-
+    <span>
+        <button mat-button type="submit">Search</button>
+    </span>
 </form>

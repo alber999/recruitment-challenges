@@ -4,7 +4,7 @@ import {TransactionService} from './service/transactionService';
 import {TransactionActionCreator} from './action/TransactionActionCreator';
 import {TransactionStore} from './store/transactionStore';
 import {CommonModule} from '@angular/common';
-import {MatButtonModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatIconModule, MatOptionModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TransactionSearchComponent} from './component/transactionSearchComponent';
@@ -19,6 +19,7 @@ import {TransactionSearchComponent} from './component/transactionSearchComponent
         MatOptionModule,
         MatButtonModule,
         MatTableModule,
+        MatIconModule,
         BrowserAnimationsModule
     ],
     declarations: [

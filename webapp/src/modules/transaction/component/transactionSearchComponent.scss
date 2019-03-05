@@ -1,0 +1,36 @@
+@import '~src/variables';
+@import '~src/mixins';
+
+button.mat-button {
+    @include standard;
+    background: $color5;
+    color: $color8;
+}
+
+.search-field {
+    padding-right: 12px;
+}
+
+.select.mat-select-panel {
+    background: $color3;
+    border: 1px solid $color7;
+}
+
+.option.mat-option {
+    @include standard;
+    color: $color6;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    color: $color1;
+    font-weight: 600;
+    background: $color4;
+}
+
+#mat-option-0 {
+    color: $color1;
+    font-weight: 600;
+    border-bottom: 1px solid $color4;
+}
+
+

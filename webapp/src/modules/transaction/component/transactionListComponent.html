@@ -1,3 +1,7 @@
+<div class="search">
+    <app-transaction-search></app-transaction-search>
+</div>
+
 <div *ngIf="transactions | async; let data">
     <table mat-table [dataSource]="data" multiTemplateDataRows>
 
@@ -34,17 +38,22 @@
         <ng-container matColumnDef="transactionDetail">
             <td mat-cell *matCellDef="let transaction" [attr.colspan]="displayedColumns.length">
                 <div class="transaction-detail"
-                     [@detailToggle]="transaction === transactionExpanded ? 'expanded' : 'collapsed'">
-                    <div style="float: left; width: 100%;">
-                        <div>ID: {{transaction.id}}</div>
-                        <div>Tracking code: {{transaction.trackingCode}}</div>
-                        <div>Brand ID: {{transaction.brandId}}</div>
-                    </div>
-                    <div style="float: right; width: 100%;">
-                        <div>First 6 digits: {{transaction.card.firstSixDigits}}</div>
-                        <div>Expiry month: {{transaction.card.expiryMonth}}</div>
-                        <div>Expiry year: {{transaction.card.expiryYear}}</div>
-                    </div>
+                     [@detailToggle]="transaction === transactionExpanded ? 'expanded' : 'collapsed'"
+                     [class.hidden]="transactionExpanded !== transaction">
+                    <ul>
+                        <li class="detail-header">ID:</li>
+                        <li class="detail-content">{{transaction.id}}</li>
+                        <li class="detail-header">First 6 digits:</li>
+                        <li class="detail-content">{{transaction.card.firstSixDigits}}</li>
+                        <li class="detail-header">Tracking code:</li>
+                        <li class="detail-content">{{transaction.trackingCode}}</li>
+                        <li class="detail-header">Expiry month:</li>
+                        <li class="detail-content">{{transaction.card.expiryMonth}}</li>
+                        <li class="detail-header">Brand ID:</li>
+                        <li class="detail-content">{{transaction.brandId}}</li>
+                        <li class="detail-header">Expiry year:</li>
+                        <li class="detail-content">{{transaction.card.expiryYear}}</li>
+                    </ul>
                 </div>
             </td>
         </ng-container>
