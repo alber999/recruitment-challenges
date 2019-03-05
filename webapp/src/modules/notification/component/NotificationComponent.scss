@@ -1,0 +1,14 @@
+.notification-error {
+    z-index: 9999;
+    width: 100%;
+    padding: 22px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #FF594E;
+    color: #FFFFFF;
+
+    a {
+        color: #FFFFFF;
+    }
+}

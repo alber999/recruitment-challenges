@@ -1,0 +1,17 @@
+<div *ngIf="notification | async; let data"
+     [@slideInOut]
+     [ngClass]="class">
+
+    <div [ngSwitch]="data.type">
+        <div *ngSwitchCase="NotificationType.ERROR">
+            <div style="float: left;">
+                Something went wrong!
+            </div>
+        </div>
+        <div>
+            <a style="float: right; padding-right: 42px"
+               href="#"
+               (click)="close($event)">Close</a>
+        </div>
+    </div>
+</div>
