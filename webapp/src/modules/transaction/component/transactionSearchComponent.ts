@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {TransactionActionCreator} from '../action/TransactionActionCreator';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
     templateUrl: './transactionSearchComponent.html',
     encapsulation: ViewEncapsulation.None,
 })
-export class TransactionSearchComponent implements OnInit {
+export class TransactionSearchComponent implements OnInit, AfterViewInit {
 
     types = [
         {name: 'Payment', value: 'payment'},
@@ -34,6 +34,10 @@ export class TransactionSearchComponent implements OnInit {
             type: '',
             currency: '',
         });
+    }
+
+    ngAfterViewInit() {
+        document.querySelector('div.mat-form-field-outline-start').classList.remove();
     }
 
     search(): void {

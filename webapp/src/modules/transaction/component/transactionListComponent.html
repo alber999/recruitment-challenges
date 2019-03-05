@@ -1,7 +1,3 @@
-<div class="search">
-    <app-transaction-search></app-transaction-search>
-</div>
-
 <div *ngIf="transactions | async; let data">
     <table mat-table [dataSource]="data" multiTemplateDataRows>
 

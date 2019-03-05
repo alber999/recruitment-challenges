@@ -3,12 +3,12 @@
 
 table {
     width: 100%;
-    background: $color3;
 }
 
 th {
     @include standard;
     font-weight: 600;
+    color: $color1;
 }
 
 tr.transaction-detail-row {
@@ -24,11 +24,15 @@ tr.transaction-row:not(.transaction-expanded-row):active {
     background: $color4;
 }
 
+tr.transaction-expanded-row td {
+    background: $color3;
+    font-weight: 600;
+}
+
 tr.transaction-row td {
     @include standard;
     border-bottom-width: 0;
     cursor: pointer;
-    font-weight: normal;
 }
 
 td.mat-cell:last-of-type {
@@ -57,7 +61,6 @@ td.mat-cell:last-of-type {
 
 .detail-header {
     @include detail;
-    padding-left: 1%;
     width: 20%;
     color: $color1;
 }
@@ -66,9 +69,4 @@ td.mat-cell:last-of-type {
     @include detail;
     width: 20%;
     color: $color2;
-}
-
-.search {
-    float: right;
-    padding-right: 0;
 }

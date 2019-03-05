@@ -5,6 +5,33 @@ button.mat-button {
     @include standard;
     background: $color5;
     color: $color8;
+    line-height: 36px;
+    padding: 3px 28px;
+}
+
+.search-container {
+    float: right;
+    padding-right: 0;
+}
+
+.mat-form-field-appearance-outline {
+    outline: none;
+    border: 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    line-height: 10px;
+    padding: 6px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    border-radius: 6px;
+    background: $color8;
+    border: 1px solid $color1;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border: 0;
 }
 
 .search-field {
@@ -12,8 +39,12 @@ button.mat-button {
 }
 
 .select.mat-select-panel {
-    background: $color3;
-    border: 1px solid $color7;
+    width: 190px;
+    background: $color8;
+    border: 1px solid $color4;
+    position: relative;
+    top: -20px;
+    left: -8px;
 }
 
 .option.mat-option {
@@ -21,16 +52,47 @@ button.mat-button {
     color: $color6;
 }
 
-.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
-    color: $color1;
+.option.mat-option .mat-icon {
+    margin-right: 0;
+}
+
+.mat-select-placeholder {
+    @include standard;
     font-weight: 600;
+    color: $color1;
+}
+
+.mat-select-value {
+    @include standard;
+    font-weight: 600;
+    color: $color1;
+}
+
+.mat-option-text {
+    @include standard;
+    font-weight: 600;
+}
+
+.option-icon {
+    float: right;
+    margin-right: -10px;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    @include standard;
+    color: $color1;
     background: $color4;
 }
 
-#mat-option-0 {
+.option-header.mat-option {
+    @include standard;
     color: $color1;
-    font-weight: 600;
     border-bottom: 1px solid $color4;
+}
+
+.button-field {
+    top: -2px;
+    position: relative;
 }
 
 
