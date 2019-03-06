@@ -6,7 +6,14 @@ button.mat-button {
     background: $color5;
     color: $color8;
     line-height: 36px;
-    padding: 3px 28px;
+    padding: 3px 24px;
+    border-radius: $border-radius;
+    height: 40px;
+}
+
+.button-field {
+    top: 1px;
+    position: relative;
 }
 
 .search-container {
@@ -21,13 +28,17 @@ button.mat-button {
 
 .mat-form-field-appearance-outline .mat-form-field-infix {
     line-height: 10px;
-    padding: 6px;
+    padding: 0px 2px 6px 2px;
 }
 
-.mat-form-field-appearance-outline .mat-form-field-outline {
-    border-radius: 6px;
-    background: $color8;
+.mat-form-field-flex {
     border: 1px solid $color1;
+    border-radius: $border-radius;
+    background: $color8;
+}
+
+.mat-form-field-outline {
+    visibility: hidden;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline-start {
@@ -78,6 +89,18 @@ button.mat-button {
     margin-right: -10px;
 }
 
+.placeholder-icon {
+    float: right;
+    height: 0;
+    position: relative;
+    top: -6px;
+    color: $color1;
+}
+
+.mat-select-arrow {
+    visibility: hidden;
+}
+
 .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
     @include standard;
     color: $color1;
@@ -88,11 +111,6 @@ button.mat-button {
     @include standard;
     color: $color1;
     border-bottom: 1px solid $color4;
-}
-
-.button-field {
-    top: -2px;
-    position: relative;
 }
 
 

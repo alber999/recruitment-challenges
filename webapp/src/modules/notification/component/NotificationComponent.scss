@@ -1,14 +1,24 @@
+@import '~src/variables';
+@import '~src/mixins';
+
 .notification-error {
+    @include standard;
     z-index: 9999;
     width: 100%;
-    padding: 22px;
+    padding: 22px 2px 12px 22px;
     position: fixed;
     left: 0;
     bottom: 0;
-    background: #FF594E;
-    color: #FFFFFF;
+    background: $color9;
+    color: $color8;
+}
 
-    a {
-        color: #FFFFFF;
-    }
+.notification-message {
+    float: left;
+}
+
+.notification-link {
+    cursor: pointer;
+    float: right;
+    padding-right: 42px
 }

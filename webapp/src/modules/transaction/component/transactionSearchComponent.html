@@ -1,7 +1,9 @@
 <div class="search-container">
     <form [formGroup]="form" (ngSubmit)="search()">
         <mat-form-field class="search-field" appearance="outline">
-            <mat-select placeholder="Transaction type" formControlName="type" panelClass="select" disableOptionCentering>
+            <span class="placeholder-icon"><mat-icon matSuffix>expand_more</mat-icon></span>
+            <mat-select placeholder="Transaction type" formControlName="type" panelClass="select"
+                        disableOptionCentering>
                 <mat-option class="option-header">
                     <span>Transaction type</span>
                     <span class="option-icon"><mat-icon>expand_less</mat-icon></span>
@@ -12,6 +14,7 @@
             </mat-select>
         </mat-form-field>
         <mat-form-field class="search-field" appearance="outline">
+            <span class="placeholder-icon"><mat-icon matSuffix>expand_more</mat-icon></span>
             <mat-select placeholder="Currency" formControlName="currency" panelClass="select" disableOptionCentering>
                 <mat-option class="option-header">
                     <span>Currency</span>

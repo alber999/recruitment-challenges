@@ -4,14 +4,12 @@
 
     <div [ngSwitch]="data.type">
         <div *ngSwitchCase="NotificationType.ERROR">
-            <div style="float: left;">
+            <div class="notification-message">
                 Something went wrong!
             </div>
         </div>
         <div>
-            <a style="float: right; padding-right: 42px"
-               href="#"
-               (click)="close($event)">Close</a>
+            <span class="notification-link" (click)="close($event)"><mat-icon>close</mat-icon></span>
         </div>
     </div>
 </div>

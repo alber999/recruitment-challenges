@@ -40,6 +40,7 @@ td.mat-cell:last-of-type {
 }
 
 .transaction-detail {
+    border-top: 1px solid $color4;
     overflow: hidden;
     width: 100%;
     background: $color3;
@@ -50,7 +51,7 @@ td.mat-cell:last-of-type {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 2%;
+    padding: 2% 2% 2% 4%;
 }
 
 .transaction-detail li {
