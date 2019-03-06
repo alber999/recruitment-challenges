@@ -6,11 +6,16 @@ server:
   port: 9999
 
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
     transactions:
       path: /transactions/**
-      sensitiveHeaders: Cookie,Set-Cookie
       url: https://jovs5zmau3.execute-api.eu-west-1.amazonaws.com/prod/transactions
+
+cors:
+  origins:
+    - http://localhost:4200
 
 service:
   transactions:
