@@ -1,6 +1,6 @@
 <div class="search-container">
     <form [formGroup]="form" (ngSubmit)="search()">
-        <mat-form-field class="search-field" appearance="outline">
+        <mat-form-field id="transaction-type-form-field" class="search-field" appearance="outline">
             <span class="placeholder-icon">
                 <mat-icon>expand_more</mat-icon>
             </span>
@@ -18,7 +18,7 @@
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field class="search-field" appearance="outline">
+        <mat-form-field id="transaction-currency-form-field" class="search-field" appearance="outline">
             <span class="placeholder-icon">
                 <mat-icon>expand_more</mat-icon>
             </span>
@@ -36,7 +36,7 @@
         </mat-form-field>
 
         <span class="button-field">
-            <button mat-button type="submit">Search</button>
+            <button id="transaction-search-button" mat-button type="submit">Search</button>
         </span>
     </form>
 </div>

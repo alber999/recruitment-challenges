@@ -1,4 +1,4 @@
-<div *ngIf="transactions | async; let data">
+<div id="transactions-table" *ngIf="transactions | async; let data">
     <table mat-table [dataSource]="data" multiTemplateDataRows>
 
         <ng-container matColumnDef="cardHolderName">
