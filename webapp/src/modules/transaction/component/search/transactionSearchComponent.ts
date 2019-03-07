@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {TransactionActionCreator} from '../action/TransactionActionCreator';
+import {TransactionActionCreator} from '../../action/transactionActionCreator';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({

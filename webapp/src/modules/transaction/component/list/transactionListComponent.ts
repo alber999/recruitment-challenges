@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Transaction} from '../domain/transaction';
-import {TransactionStore} from '../store/transactionStore';
-import {TransactionStorePayload} from '../store/transactionStorePayload';
-import {TransactionActionCreator} from '../action/TransactionActionCreator';
-import {ActionResult} from '../../flux/action/actionResult';
+import {Transaction} from '../../domain/transaction';
+import {TransactionStore} from '../../store/transactionStore';
+import {TransactionStorePayload} from '../../store/transactionStorePayload';
+import {TransactionActionCreator} from '../../action/transactionActionCreator';
+import {ActionResult} from '../../../flux/action/actionResult';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({

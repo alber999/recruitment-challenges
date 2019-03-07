@@ -1,16 +1,16 @@
 import {Component, ElementRef, OnDestroy, OnInit} from '@angular/core';
-import {NotificationStore} from '../store/NotificationStore';
+import {NotificationStore} from '../store/notificationStore';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {NotificationStorePayload} from '../store/NotificationStorePayload';
+import {NotificationStorePayload} from '../store/notificationStorePayload';
 import {Observable} from 'rxjs/Observable';
-import {Notification} from '../domain/Notification';
-import {NotificationType} from '../domain/NotificationType';
-import {NotificationActionCreator} from '../action/NotificationActionCreator';
+import {Notification} from '../domain/notification';
+import {NotificationType} from '../domain/notificationType';
+import {NotificationActionCreator} from '../action/notificationActionCreator';
 
 @Component({
     selector: 'app-notification',
-    styleUrls: ['./NotificationComponent.scss'],
-    templateUrl: './NotificationComponent.html',
+    styleUrls: ['./notificationComponent.scss'],
+    templateUrl: './notificationComponent.html',
     animations: [
         trigger('slideInOut', [
             transition(':enter', [

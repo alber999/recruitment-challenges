@@ -1,22 +1,15 @@
 import {NgModule} from '@angular/core';
-import {LoadingActionCreator} from './action/LoadingActionCreator';
-import {LoadingComponent} from './component/LoadingComponent';
-import {LoadingStore} from './store/LoadingStore';
+import {LoadingActionCreator} from './action/loadingActionCreator';
+import {LoadingComponent} from './component/loadingComponent';
+import {LoadingStore} from './store/loadingStore';
 import {CommonModule} from '@angular/common';
-import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
-import {HttpLoadingInterceptor} from './interceptor/HttpLoadingInterceptor';
+import {NgxLoadingModule} from 'ngx-loading';
+import {HttpLoadingInterceptor} from './interceptor/httpLoadingInterceptor';
 
 @NgModule({
     imports: [
         CommonModule,
-        NgxLoadingModule.forRoot({
-            animationType: ngxLoadingAnimationTypes.threeBounce,
-            backdropBackgroundColour: 'rgba(0,0,0,0.2)',
-            backdropBorderRadius: '4px',
-            primaryColour: '#213d8f',
-            secondaryColour: '#213d8f',
-            tertiaryColour: '#213d8f'
-        })
+        NgxLoadingModule.forRoot({})
     ],
     declarations: [
         LoadingComponent

@@ -1,6 +1,6 @@
 import './rxjs.operators';
 
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserModule, Title} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './component/appComponent';
@@ -8,9 +8,9 @@ import {FluxModule} from '../modules/flux/flux.module';
 import {TransactionModule} from '../modules/transaction/transaction.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LoadingModule} from '../modules/loading/loading.module';
-import {HttpLoadingInterceptor} from '../modules/loading/interceptor/HttpLoadingInterceptor';
+import {HttpLoadingInterceptor} from '../modules/loading/interceptor/httpLoadingInterceptor';
 import {NotificationModule} from '../modules/notification/notification.module';
-import {HttpNotificationInterceptor} from '../modules/notification/interceptor/HttpNotificationInterceptor';
+import {HttpNotificationInterceptor} from '../modules/notification/interceptor/httpNotificationInterceptor';
 
 @NgModule({
     declarations: [
@@ -25,6 +25,7 @@ import {HttpNotificationInterceptor} from '../modules/notification/interceptor/H
         TransactionModule
     ],
     providers: [
+        Title,
         [
             {provide: HTTP_INTERCEPTORS, useClass: HttpLoadingInterceptor, multi: true},
             {provide: HTTP_INTERCEPTORS, useClass: HttpNotificationInterceptor, multi: true}

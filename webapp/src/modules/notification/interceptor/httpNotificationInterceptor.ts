@@ -1,6 +1,6 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {NotificationActionCreator} from '../action/NotificationActionCreator';
+import {NotificationActionCreator} from '../action/notificationActionCreator';
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs';
 

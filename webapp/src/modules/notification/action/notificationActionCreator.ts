@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Dispatcher} from '../../flux/dispatcher/dispatcher';
 import {ActionDomain} from '../../flux/action/actionDomain';
 import {ActionOperation} from '../../flux/action/actionOperation';
-import {NotificationType} from '../domain/NotificationType';
+import {NotificationType} from '../domain/notificationType';
 import {Action} from '../../flux/action/action';
 
 @Injectable()

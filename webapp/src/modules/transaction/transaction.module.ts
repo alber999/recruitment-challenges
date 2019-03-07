@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core';
-import {TransactionListComponent} from './component/transactionListComponent';
+import {TransactionListComponent} from './component/list/transactionListComponent';
 import {TransactionService} from './service/transactionService';
-import {TransactionActionCreator} from './action/TransactionActionCreator';
+import {TransactionActionCreator} from './action/transactionActionCreator';
 import {TransactionStore} from './store/transactionStore';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule, MatFormFieldModule, MatIconModule, MatOptionModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TransactionSearchComponent} from './component/transactionSearchComponent';
+import {TransactionSearchComponent} from './component/search/transactionSearchComponent';
+import {TransactionComponent} from './component/transactionComponent';
 
 @NgModule({
     imports: [
@@ -23,12 +24,12 @@ import {TransactionSearchComponent} from './component/transactionSearchComponent
         BrowserAnimationsModule
     ],
     declarations: [
+        TransactionComponent,
         TransactionSearchComponent,
         TransactionListComponent
     ],
     exports: [
-        TransactionSearchComponent,
-        TransactionListComponent
+        TransactionComponent
     ],
     providers: [
         TransactionService,

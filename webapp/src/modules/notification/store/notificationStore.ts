@@ -1,20 +1,19 @@
 import {Injectable} from '@angular/core';
-import {Store} from '../../flux/store/store';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {LoadingStorePayload} from './LoadingStorePayload';
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription';
+import {Store} from '../../flux/store/store';
+import {NotificationStorePayload} from './notificationStorePayload';
 import {Dispatcher} from '../../flux/dispatcher/dispatcher';
 import {Action} from '../../flux/action/action';
 import {ActionDomain} from '../../flux/action/actionDomain';
 
-
 @Injectable()
-export class LoadingStore implements Store {
+export class NotificationStore implements Store {
 
-    private subject: BehaviorSubject<LoadingStorePayload> = new BehaviorSubject(new LoadingStorePayload());
+    private subject: BehaviorSubject<NotificationStorePayload> = new BehaviorSubject(new NotificationStorePayload());
 
-    public payload: Observable<LoadingStorePayload> = this.subject.asObservable();
+    public payload: Observable<NotificationStorePayload> = this.subject.asObservable();
 
     private subscription: Subscription;
 
@@ -25,20 +24,22 @@ export class LoadingStore implements Store {
     }
 
     destroy(): void {
+        this.subject.getValue().notification = null;
         this.subject.getValue().action = null;
-        this.subject.getValue().isLoading = null;
         this.subscription.unsubscribe();
     }
 
     private filter(action: Action): boolean {
-        return ActionDomain.LOADING === action.domain;
+        return ActionDomain.NOTIFICATION === action.domain;
     }
 
     private next(action: Action): void {
         this.subject.getValue().action = action;
+
         if (null != action.data) {
-            this.subject.getValue().isLoading = action.data;
+            this.subject.getValue().notification = action.data;
         }
+
         this.subject.next(this.subject.getValue());
     }
 }

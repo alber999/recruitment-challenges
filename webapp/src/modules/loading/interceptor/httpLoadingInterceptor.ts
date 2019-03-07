@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
-import {LoadingActionCreator} from '../action/LoadingActionCreator';
+import {LoadingActionCreator} from '../action/loadingActionCreator';
 import {Observable} from 'rxjs/Observable';
 
 @Injectable()
