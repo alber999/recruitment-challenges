@@ -54,8 +54,8 @@ describe('TransactionListComponent', () => {
 
     it('should have displayedColumns defined properly', () => {
         const fixture = TestBed.createComponent(TransactionListComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app.displayedColumns).toEqual(['cardHolderName', 'brand', 'cardLast4Digits', 'type', 'amount', 'currency']);
+        const component = fixture.debugElement.componentInstance;
+        expect(component.displayedColumns).toEqual(['cardHolderName', 'brand', 'cardLast4Digits', 'type', 'amount', 'currency']);
     });
 
     it('should render transactions table', () => {
