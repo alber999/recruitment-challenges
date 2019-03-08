@@ -12,6 +12,7 @@ import {ActionOperation} from '../../../flux/action/actionOperation';
 import {By} from '@angular/platform-browser';
 import {ActionResult} from '../../../flux/action/actionResult';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 
 const transactionActionCreatorStub: Partial<TransactionActionCreator> = {
     getAll(params?: { action?: string, currencyCode?: string }) {
@@ -42,7 +43,8 @@ describe('TransactionListComponent', () => {
             providers: [
                 {provide: TransactionActionCreator, useValue: transactionActionCreatorStub},
                 {provide: TransactionStore, useValue: transactionStoreStub}
-            ]
+            ],
+            schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
     }));
 
