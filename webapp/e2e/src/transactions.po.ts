@@ -44,4 +44,9 @@ export class AppPage {
 
         element(by.id('transaction-search-button')).click();
     }
+
+    viewTransactionDetails() {
+        element.all(by.css('.transaction-row')).first().click();
+        return element.all(by.css('div.transaction-detail:not(.hidden)')).count() as Promise<number>;
+    }
 }

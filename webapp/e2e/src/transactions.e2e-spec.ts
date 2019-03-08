@@ -46,4 +46,8 @@ describe('workspace-project App', () => {
         page.searchTransaction('Authorize', 'GBP');
         expect(page.getNotification('notification-error')).toBeTruthy();
     });
+
+    it('should display transaction details when transaction row is clicked', () => {
+        expect(page.viewTransactionDetails()).toBe(1);
+    });
 });
