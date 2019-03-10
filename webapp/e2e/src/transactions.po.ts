@@ -13,7 +13,7 @@ export class AppPage {
         return element(by.id('transactions-table')).isPresent() as Promise<boolean>;
     }
 
-    getRowsTransactionsTable() {
+    countRowsTransactionsTable() {
         return element.all(by.css('.transaction-row')).count() as Promise<number>;
     }
 
@@ -45,8 +45,11 @@ export class AppPage {
         element(by.id('transaction-search-button')).click();
     }
 
-    viewTransactionDetails() {
+    getFirstTransactionDetails() {
         element.all(by.css('.transaction-row')).first().click();
+    }
+
+    countTransactionDetails() {
         return element.all(by.css('div.transaction-detail:not(.hidden)')).count() as Promise<number>;
     }
 }

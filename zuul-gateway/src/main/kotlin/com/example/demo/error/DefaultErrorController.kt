@@ -20,7 +20,7 @@ class DefaultErrorController : ErrorController {
 
     @RequestMapping("/error", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun error(): ResponseEntity<Error> {
-        log.error("Zuul mapping error")
+        log.error("Generic error")
         return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(Error(
                 timestamp = System.currentTimeMillis(),
                 status = ERROR.value(),

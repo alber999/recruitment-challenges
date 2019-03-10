@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 9998
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  routes:
+    transactions:
+      path: /transactions/**
+      url: https://jovs5zmau3.execute-api.eu-west-1.amazonaws.com/prod/transactions
+
+cors:
+  origins:
+    - http://localhost:4200
+
+service:
+  transactions:
+    username: code-challenge
+    password: payvisioner

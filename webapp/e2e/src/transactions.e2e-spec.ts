@@ -17,7 +17,7 @@ describe('workspace-project App', () => {
     });
 
     it('should display 5 transactions', () => {
-        expect(page.getRowsTransactionsTable()).toBe(5);
+        expect(page.countRowsTransactionsTable()).toBe(5);
     });
 
     it('should display transactions type selector', () => {
@@ -34,12 +34,12 @@ describe('workspace-project App', () => {
 
     it('should display 1 transaction (Credit/EUR)', () => {
         page.searchTransaction('Credit', 'EUR');
-        expect(page.getRowsTransactionsTable()).toBe(1);
+        expect(page.countRowsTransactionsTable()).toBe(1);
     });
 
     it('should display 2 transaction (Payment/USD)', () => {
         page.searchTransaction('Payment', 'USD');
-        expect(page.getRowsTransactionsTable()).toBe(2);
+        expect(page.countRowsTransactionsTable()).toBe(2);
     });
 
     it('should display error notification when trying (Authorize/GBP)', () => {
@@ -47,7 +47,10 @@ describe('workspace-project App', () => {
         expect(page.getNotification('notification-error')).toBeTruthy();
     });
 
-    it('should display transaction details when transaction row is clicked', () => {
-        expect(page.viewTransactionDetails()).toBe(1);
+    it('should display/hide transaction details when transaction row is clicked', () => {
+        page.getFirstTransactionDetails();
+        expect(page.countTransactionDetails()).toBe(1);
+        page.getFirstTransactionDetails();
+        expect(page.countTransactionDetails()).toBe(0);
     });
 });
