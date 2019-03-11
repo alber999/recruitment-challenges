@@ -32,7 +32,7 @@ In terms of _scalability_, having a gateway in our system to orchestrate transac
 
 # Modules description
 
-For detailed informationa about agteway service and client webapp follow the links below
+For detailed information about gateway service and client webapp follow the links below
 
 See **Gateway Service** documentation:
 
