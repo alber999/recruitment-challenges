@@ -34,8 +34,8 @@ For detailed informationa about agteway service and client webapp follow the lin
 
 See **Gateway Service** documentation:
 
-[Gateway README](./zuul-gateway/README.md)
+[Gateway README](./zuul-gateway)
 
 See **Client WebApp** documentation:
 
-[Webapp README](./webapp/README.md)
+[Webapp README](./webapp)
