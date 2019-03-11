@@ -16,13 +16,15 @@ These credentials should be never exposed in **client webapp application**. This
 
 This gateway service adds the authentication header to requests made by client webapp, so webapp does not know anything about transactions endpoint authentication.
 
+In addition, gateway service supports CORS allowing only client webapp origin
+
 ![alt text](./img/high-level-description.png "High level description")
 
 Why a gateway and not a _middleware_ service in charge of receiving client webapp requests and call to transactions endpoint adding auth header and processing the response to send it to client webapp?
 
 Well, this is something about **responsibility** and **scalability**.
 
-The _responsibility_ to provide data relays on transactions endpoint. Adding a direct **dependency** between transactions endpoint and a _middleware_ service is a bad idea. This is an unnecessary **coupling**. 
+The _responsibility_ to provide data is for transactions endpoint. Adding a direct **dependency** between transactions endpoint and a _middleware_ service is a bad idea. This is an unnecessary **coupling**. 
 
 Is this service going to implement its own mirror data domain and validations? Yes, no? What happens if data domain changes? Refactor? Anyway, this is not a good solution.
 
