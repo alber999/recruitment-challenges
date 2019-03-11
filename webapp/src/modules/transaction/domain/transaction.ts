@@ -1,7 +1,7 @@
 import {CreditCard} from './creditCard';
 
 export interface Transaction {
-    id: string,
+    id: string;
     action: string;
     amount: number;
     brandId: number;

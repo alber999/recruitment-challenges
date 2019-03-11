@@ -2,6 +2,22 @@
 
 [Challenge description](https://github.com/payvision-development/recruitment-challenges/tree/fullstack-engineer)
 
+# Webapp
+
+This repository contains a client web application implemented on Angular 7.3.3 as a part of the challenge solution. To see _High Level System_ description go [here](./../README.md)
+
+# Commands
+
+**NPM** is the application dependency manager. To run application lifecycle tasks, run from current directory:
+
+| command | description |
+| :----- | :------- |
+| `npm start` | Run application in dev mode |
+| `npm run start-prod` | Run application in prod mode |
+| `npm build` | Build application |
+| `npm run lint` | Run lint checks |
+| `npm test` | Run unit tests |
+| `npm run e2e` | Run end to end tests |
 
 # Webapp
 
