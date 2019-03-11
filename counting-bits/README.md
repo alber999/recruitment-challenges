@@ -1,6 +1,6 @@
 # Challenge
 
-[Challenge description](./01.Algorithm.CountingBits.Instructions.pdf)
+[Challenge description](https://github.com/payvision-development/recruitment-challenges/tree/software-engineer-js)
 
 # Commands
 
@@ -10,6 +10,10 @@
 | `npm test` | Run the tests |
 | `npm run test-coverage` | Run the tests with coverage report |
 | `npm run lint` | Run code lint |
+
+# Getting started
+
+Run `npm install` command & run tests: `npm tests`
 
 # Development environment
 
