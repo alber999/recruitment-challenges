@@ -98,7 +98,7 @@ Configuration files:
 | zuul.sensitiveHeaders | HTTP headers too sensitive to be passed on to the downstream applications | Cookie,Set-Cookie |
 | zuul.ignored-headers | HTTP headers that are totally ignored once traffic reaches Zuul, when sending traffic to downstream and from the response of the downstream services | Access-Control-Allow-Credentials, Access-Control-Allow-Origin |
 | zuul.routes.transactions.path | zuul gateway endpoint for transactions | /transactions/** |
-| zuul.routes.transactions.url | external url to be routed when zuul gateway endpoint is reached | https://jovs5zmau3.execute-api.eu-west-1.amazonaws.com/prod/transactions |
+| zuul.routes.transactions.url | transactions endpoint url to be routed when zuul gateway endpoint is reached | https://jovs5zmau3.execute-api.eu-west-1.amazonaws.com/prod/transactions |
 | cors.origins | List of cross origins allowed by zuul gateway  | - http://localhost:4200 |
 | service.transactions.username | Transactions endpoint HTTP Basic Auth username | username |
 | service.transactions.password | Transactions endpoint HTTP Basic Auth password | password |
