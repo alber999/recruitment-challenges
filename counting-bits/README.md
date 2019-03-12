@@ -48,7 +48,7 @@ Enter counting bits challenge directory
 cd counting-bits
 ```
 
-Run `npm install` command & run tests: `npm tests`
+Run `npm install` command & run tests: `npm test`
 
 # Development environment
 
