@@ -229,7 +229,7 @@ See picture below describing strategy
 
 **Space complexity**: No auxiliar structures in solution = `O(1)`
 
-## Conclusion
+# Final thoughts
 
 Different solutions presented, each one suitable for different needs and requirements.
 
