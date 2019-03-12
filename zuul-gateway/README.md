@@ -31,6 +31,25 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 
 # Getting started
 
+Clone this repository
+
+```
+git clone git@github.com:alber999/recruitment-challenges.git
+```
+
+Switch to challenge branch
+
+```
+cd recruitment-challenges
+git checkout fullstack-engineer
+```
+
+Enter zuul gateway directory
+
+```
+cd zuul-gateway
+```
+
 Run `./gradlew test integration` command to make sure everything works ok, then, run the application `./gradlew bootRun`
 
 Check in browser: http://localhost:9999/transactions

@@ -45,6 +45,25 @@ Angular CLI: 7.3.3
 
 # Getting started
 
+Clone this repository
+
+```
+git clone git@github.com:alber999/recruitment-challenges.git
+```
+
+Switch to challenge branch
+
+```
+cd recruitment-challenges
+git checkout fullstack-engineer
+```
+
+Enter web app directory
+
+```
+cd webapp
+```
+
 Run `npm install` to install dependencies
 
 First run gateway service, needed for end to end tests and application. See how to [here](./../zuul-gateway) 
@@ -135,7 +154,7 @@ Generic support:
 
 Configuration files:
 
-* **src/environments**: Default angular envs defined
+* **src/environments**: Default angular envs defined having application properties
 
 # Application properties
 
