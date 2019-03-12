@@ -13,6 +13,25 @@
 
 # Getting started
 
+Clone this repository
+
+```
+git clone git@github.com:alber999/recruitment-challenges.git
+```
+
+Switch to challenge branch
+
+```
+cd recruitment-challenges
+git checkout software-engineer-js
+```
+
+Enter counting bits challenge directory
+
+```
+cd counting-bits
+```
+
 Run `npm install` command & run tests: `npm tests`
 
 # Development environment
