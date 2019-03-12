@@ -11,6 +11,22 @@
 | `npm run test-coverage` | Run the tests with coverage report |
 | `npm run lint` | Run code lint |
 
+# Requirements
+
+Node installed
+
+```
+$ node -v
+v11.10.0
+```
+
+NPM installed
+
+```
+$ npm -v
+6.7.0
+```
+
 # Getting started
 
 Clone this repository
