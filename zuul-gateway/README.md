@@ -63,7 +63,6 @@ src/
          application.yml
    test/
       kotlin/com.example.demo/
-.gitignore
 build.gradle
 gradlew
 gradlew.bat
@@ -103,7 +102,20 @@ Configuration files:
 | service.transactions.username | Transactions endpoint HTTP Basic Auth username | username |
 | service.transactions.password | Transactions endpoint HTTP Basic Auth password | password |
 
-# Main features
+# Error response
+
+Following sample describes JSON error response format
+
+```
+{
+   "timestamp": 1552316178372,
+   "status": 503,
+   "error": "Service Unavailable",
+   "message": "Service Unavailable"
+}
+```
+
+# Final thoughts
 
 This is an implementation for a challenge, so default namespace (`com.example.demo`) from Spring starter (https://start.spring.io/) was not modified.
 
@@ -123,15 +135,3 @@ This is an implementation for a challenge, so default namespace (`com.example.de
 
 * Unit and integration tests implemented
 
-# Error response
-
-Following sample describes JSON error response format
-
-```
-{
-   "timestamp": 1552316178372,
-   "status": 503,
-   "error": "Service Unavailable",
-   "message": "Service Unavailable"
-}
-```

@@ -12,6 +12,7 @@ This repository contains a client web application implemented on Angular 7.3.3 a
 
 | command | description |
 | :----- | :------- |
+| `npm install` | Install dependencies |
 | `npm start` | Run application in dev mode |
 | `npm run start:prod` | Run application in prod mode |
 | `npm build` | Build application |
@@ -19,30 +20,139 @@ This repository contains a client web application implemented on Angular 7.3.3 a
 | `npm test` | Run unit tests |
 | `npm run e2e` | Run end to end tests |
 
-# Webapp
+# Requirements
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+Node installed
 
-## Development server
+```
+$ node -v
+v11.10.0
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+NPM installed
 
-## Code scaffolding
+```
+$ npm -v
+6.7.0
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular-CLI installed
 
-## Build
+```
+$ ng --version
+Angular CLI: 7.3.3
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Getting started
 
-## Running unit tests
+Run `npm install` to install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+First run gateway service, needed for end to end tests and application. See how to [here](./../zuul-gateway) 
 
-## Running end-to-end tests
+Run `npm test` and `npm run e2e` command to make sure everything works ok, then, run `npm start` to run app in _dev_ mode, or `npm run start:prod` in _prod_ mode
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# Development environment
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* MacOS 10.14.3
+* Node 11.10.0
+* NPM 6.7.0
+* Angular-CLI 7.3.3
+* Angular 7.2.7
+* Material Design
+* Jasmine 2.99
+* Karma 4.0
+
+# Project design
+
+This application has been designed following FLUX Architecture. See [Facebook Flux overview](https://facebook.github.io/flux/docs/in-depth-overview.html) for more info
+ 
+There are 3 main features
+
+* loading
+* notification
+* transaction
+
+All features implemented in Angular modules. Let's see a short review of all features
+
+## Flux architecture
+
+Architecture implemented with support of rxjs Observables allowing reactive and asynchronous data flows and complete component uncoupling
+
+## Loading
+
+Loading indicator whenever an XHTTP request is executed. Implemented on angular HttpInterceptor
+
+## Notification
+
+Only error notifications implemented covering application requirements. UI notifications for user whenever an XHTTP request fails. Notification shown for 3 seconds unless user closes it. Implemented on angular HttpInterceptor
+
+## Transaction
+
+Module gathering all transactions data management and visualization related features
+
+
+# User Interface
+
+Responsive UI implemented on Material Design angular components, angular animations and SASS defining variables/mixins for main UI colors and fonts
+
+# Project scaffolding
+
+```
+src/
+   app/
+      component/
+      app.module.ts
+      rxjs.operators.ts
+   environments/
+   lib/
+   modules/
+      flux/
+      loading/
+      notification/
+      transaction/
+   _mixins.scss
+   _variables.scss
+   styles.scss
+   main.ts
+package.json
+README.md
+```
+
+Tests located alongside source code as well as html and scss files in components
+
+App:
+
+* **src/app**: Main app module and component
+
+Modules:
+
+* **src/modules**: Contains 4 application angular modules
+
+Generic support:
+
+* **src/lib**: Utilities code
+
+Configuration files:
+
+* **src/environments**: Default angular envs defined
+
+# Application properties
+
+| property | description | sample value |
+| :------- | :---------- | :----------- |
+| endpoints.transaction | Transaction service endpoint | http://localhost:9999 |
+
+# Final thoughts
+
+This is an implementation for a challenge with a single main feature: show transactions
+
+* Default base route is enough to cover requirements
+
+* No user authentication implemented
+
+* No i18n support added
+
+* No HTTP caching added
+
+* No support for PWA added
