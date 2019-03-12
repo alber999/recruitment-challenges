@@ -173,6 +173,8 @@ Configuration files:
 
 This is an implementation for a challenge with a single main feature: show transactions
 
+* Application design might be considered a bit overloaded, this could be done in default app component using a material table DataSource. But Angular modules and Flux design allow this application to scale better, to have uncoupled components and to get rid of undesirable event bubbling between strong coupled components
+
 * Default base route is enough to cover requirements
 
 * No user authentication implemented
