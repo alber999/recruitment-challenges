@@ -13,7 +13,7 @@ This repository contains a client web application implemented on Angular 7.3.3 a
 | command | description |
 | :----- | :------- |
 | `npm start` | Run application in dev mode |
-| `npm run start-prod` | Run application in prod mode |
+| `npm run start:prod` | Run application in prod mode |
 | `npm build` | Build application |
 | `npm run lint` | Run lint checks |
 | `npm test` | Run unit tests |

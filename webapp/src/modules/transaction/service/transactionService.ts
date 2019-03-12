@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import {Transaction} from '../domain/transaction';
 import {CreditCard} from '../domain/creditCard';
 import {ServiceUtil} from '../../../lib/ServiceUtil';
+import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class TransactionService {
@@ -29,7 +30,9 @@ export class TransactionService {
     }
 
     getAll(params?: { action?: string, currencyCode?: string }): Observable<Transaction[]> {
-        return this.httpClient.get('http://localhost:9999/transactions', ServiceUtil.httpOptions(params))
-            .map((res: any) => res.map((el: any) => TransactionService.mapTransaction(el)));
+        return this.httpClient.get(
+            environment.endpoints.transaction + '/transactions',
+            ServiceUtil.httpOptions(params)).map(
+            (res: any) => res.map((el: any) => TransactionService.mapTransaction(el)));
     }
 }
