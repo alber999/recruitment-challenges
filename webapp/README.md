@@ -79,6 +79,7 @@ Run `npm test` and `npm run e2e` command to make sure everything works ok, then,
 * Angular-CLI 7.3.3
 * Angular 7.2.7
 * Material Design
+* Protractor for e2e tests
 * Jasmine 2.99
 * Karma 4.0
 
@@ -118,6 +119,8 @@ Responsive UI implemented on Material Design angular components, angular animati
 # Project scaffolding
 
 ```
+e2e/
+    src/
 src/
    app/
       component/
@@ -139,6 +142,10 @@ README.md
 ```
 
 Tests located alongside source code as well as html and scss files in components
+
+End to end tests:
+
+* **e2e/src**: End to end tests based on page objects
 
 App:
 
