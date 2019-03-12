@@ -55,6 +55,9 @@ Run `npm install` command & run tests: `npm test`
 * MacOS 10.14.3
 * Node v11.10.0
 * Npm 6.7.0
+* Mocha 4.1.0
+* Sinon 7.2.5
+* Istanbul
 * IntelliJ
 
 # Code style
